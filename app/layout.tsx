@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ConvexClientProvider } from '@/providers/convex-client-provider';
-import { DashboardLayout } from '@/app/_components/dashboard-layout';
+
 import { Toaster } from '@/components/ui/sonner';
 import { ModalProvider } from '@/providers/modal-provider';
 
@@ -22,11 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ConvexClientProvider>
-          <DashboardLayout>
-            <Toaster />
-            <ModalProvider />
-            {children}
-          </DashboardLayout>
+          <Toaster />
+          <ModalProvider />
+          {children}
         </ConvexClientProvider>
       </body>
     </html>

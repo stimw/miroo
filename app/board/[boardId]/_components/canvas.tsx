@@ -5,6 +5,7 @@ import { Info } from './info';
 import { Toolbar } from './toolbar';
 import { Participants } from './participants';
 import { LayerPreview } from './layer-preview';
+import { SelectionBox } from './selection-box';
 import { nanoid } from 'nanoid';
 import { LiveObject } from '@liveblocks/client';
 import {
@@ -195,6 +196,7 @@ export const Canvas = ({ boardId }: CanvasProps) => {
               selectionColor={layerIdsToColorSelection[layerId]}
             />
           ))}
+          <SelectionBox onResizeHandlePointerDown={() => {}} />
           <CursorsPresence />
         </g>
       </svg>
